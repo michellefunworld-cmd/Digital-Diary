@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Digital Diary</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-pink">
+
+<header>
+  <h1>🌸 My Digital Diary 🌸</h1>
+  <div class="themes">
+    <button data-theme="theme-red">❤️ Red</button>
+    <button data-theme="theme-pink">💗 Pink</button>
+    <button data-theme="theme-rose">🌹 Rose</button>
+    <button id="toggleDark">🌙 Dark Mode</button>
+  </div>
+</header>
+
+<main class="main-content">
+  <!-- CALENDAR + ENTRY -->
+  <section class="calendar-section">
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prevMonth">‹</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth">›</button>
+      </div>
+      <div class="weekdays">
+        <span>Sun</span><span>Mon</span><span>Tue</span>
+        <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+      <div id="calendarDays" class="days"></div>
+    </div>
+
+    <div class="editor">
+      <textarea id="entryText" placeholder="Dear diary..."></textarea>
+      <div class="moods">
+        <span>Choose Mood:</span>
+        <button data-mood="😊">😊</button>
+        <button data-mood="😐">😐</button>
+        <button data-mood="😢">😢</button>
+        <button data-mood="💕">💕</button>
+      </div>
+      <button id="saveEntry">💾 Save Entry</button>
+    </div>
+  </section>
+
+  <!-- MUSIC PLAYER -->
+  <section class="music-section">
+    <label>Diary Vibes 🎵</label>
+    <div class="music-player">
+      <iframe 
+        width="100%" 
+        height="80" 
+        scrolling="no" 
+        frameborder="no" 
+        allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1892554121&color=%23db126e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
